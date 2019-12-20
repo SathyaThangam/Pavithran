@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<head>
+    <title>CSS-Tricks</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body{
+            background-color:#100e17 ;
+            margin: 0;
+        }
+        .main{
+            height: 500px;
+            background-color: blanchedalmond;
+            position: relative;
+        }
+        .sub{
+            height: 300px;
+             padding: 2rem;
+            max-width: 1284px;
+            margin: 0 auto;
+        }
+        .name-date{
+            display: inline-flex;
+        }
+        .author-details{
+            display: grid;
+            grid-template-columns: 80px auto 1fr;
+            grid-template-areas:
+                "avatar author comments"
+                "avatar published updated";
+            grid-gap: .5rem 2rem;
+            -webkit-box-align: center;
+            align-items: center;
+            margin: 0 0 1.5rem;
+            white-space: nowrap;
+        }
+        .main{
+            background-image: radial-gradient(ellipse closest-side, rgba(15, 14, 22, 0.75), #100e17), url(https://res.cloudinary.com/css-tricks/image/fetch/w_1200,q_auto,f_auto/https://css-tricks.com/wp-content/uploads/2017/09/repeating-linear-gradient.png);
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .first-article{
+            display:flexbox;
+            width: 809px;
+            font-size: 20px;
+        }
+        a:not(.button):not(.commentPreviewButton):not(.comment-reply-link):focus, a:not(.button):not(.commentPreviewButton):not(.comment-reply-link):hover {
+            background: -webkit-gradient(linear,left top,right top,from(#ff8a00),to(#e52e71));
+            background: linear-gradient(90deg,#ff8a00,#e52e71);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            -webkit-box-decoration-break: clone;
+            box-decoration-break: clone;
+            text-shadow: none;
+        }
+        .tags a:focus, .tags a:hover {
+            color: #03a9f4;
+            border-color: #fff;
+            position: relative;
+        }
+        .tags a {
+            color: #7a7a8c;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: .66rem;
+            white-space: nowrap;
+            border: 3px solid #28242f;
+            border-radius: 2rem;
+            padding: .2rem .85rem .25rem;
+        }
+        a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .tags {
+            margin: 1rem 0 2rem;
+            padding: .5rem 0 1rem;
+            line-height: 1.8;
+        }
+        .author-name,.comments{
+            line-height: 4px;
+        }
+        
+       </style>
+</head>
+<body>
+    <header class='cssHead'>
+        <div class='cssLogo'>
+            <img src='img.svg' class='logoImg' alt="CSS-TricksLogo" height="38px" width="34px">
+            <img src='logoText.svg' class='logoText' alt="CSS-TricksLogoText" height="35px" width="214px">
+        </div>
+        <div class="headerMid">
+            <div class='headerElements'>
+              <ul class="elementsList">
+                <li>
+                    <a href="#">
+                        <img src='element1.svg' alt='element1'><br>
+                        <span>Articles</span></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src='element2.svg' alt='element1'><br>
+                        <span>Videos</span></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src='element3.svg' alt='element1'><br>
+                        <span>Almanac</span></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src='element4.svg' alt='element1'><br>
+                        <span>Snippets</span></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src='element5.svg' alt='element1'><br>
+                        <span>Newsletters</span></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src='element6.svg' alt='element1'><br>
+                        <span>Jobs</span></img>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src='element7.svg' alt='element1'><br>
+                        <span>Guides</span></img>
+                    </a>
+                </li>
+              </ul>
+            </div>
+        </div>
+        <div class='headersearch'>
+           <form class="search-form">
+              <input type="search" class="search-field" placeholder="e.g. flexbox" value="">
+                <button type="submit" class="button-search">
+                  <svg class="icon-search" width="26px" height="26px">
+                   <use xlink:href="#icon-search">
+                       <svg id="icon-search" fill='white' viewBox="0 0 100 100"><path d="M80.65 66.78a33.55 33.55 0 01-47.44-47.44 33.55 33.55 0 1147.44 47.44zm6.73-54.16a43.06 43.06 0 00-65.32 55.71L2 88.39A6.8 6.8 0 0011.61 98l20.06-20.06a43.06 43.06 0 0055.71-65.32z"></path></svg>
+                   </use>
+                  </svg>
+                </button>
+            </form>
+        </div>
+    </header>
+    <div class='main'>
+        <div class='sub'>
+            <div class='first-article'>
+                <div class='name-date'>
+                    <p class='white-color'>Fresh Article</p>
+                    <p class='grey-color'>&nbsp&nbsp&nbspDecember 19,2019</p>
+                </div>
+                <div class='article-title '>
+                    <h1 class='white-color'>Make a smooth shadow, friend.</h1>
+                </div>
+                <div class='author-details'>
+                    <div class='author-pic'>
+                        <a href="https://css-tricks.com/author/chriscoyier/">
+                            <img alt="Avatar of Chris Coyier" src="https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=80&amp;d=retro&amp;r=pg" 
+                            srcset="https://secure.gravatar.com/avatar/8081b26e05bb4354f7d65ffc34cbbd67?s=160&amp;d=retro&amp;r=pg 2x"
+                            class="avatar avatar-80 photo" height="80" width="80" style="border-radius: 50%;">
+                        </a>
+                    </div>
+                    <div class="author-name">
+                        <p class="grey-color">Author</p>
+                        <p class='white-color'>Pavithran</p>
+                    </div>
+                    <div class="comments">
+                        <p class='grey-color'>Comments</p>
+                        <p  class='white-color'>Start the Conversation</p>
+                    </div>
+                </div>
+                <div class='article-content'>
+                        <p>One <a href="https://css-tricks.com/almanac/properties/b/box-shadow/"><code>box-shadow</code></a> is cool and all, 
+                            but check out Philipp Brumm's tool for building out comma-separated multiple box-shadows, 
+                            which result in a much smoother and more natural look. </p>
+                        <p>This reminds me very much of the idea for 
+                            <a href="https://css-tricks.com/easing-linear-gradients/">easing linear-gradient</a>. 
+                            In a gradient, this smoothing effect is handled by multiple stops with the position and color 
+                            <em>eased</em> (sloped) rather than linear (straight). 
+                            The result is noticeably smoother and a more pleasing look. …
+                             <a href="https://css-tricks.com/make-a-smooth-shadow-friend/" class="read-more">Read article </a></p> </div>
+                </div>
+                <div class='box-shadow'>
+                    <div class="tags">
+                        <a href="https://css-tricks.com/tag/box-shadow/" rel="tag">box-shadow</a> </div>
+                </div>
+            </div>
+            <div class='advertisement'>
+                <div class="hero-article-ad" id="hero-article-ad">
+                    <div class="single-module single-module-Monday module-7">
+                        <div class="module">
+                            <a href="//srv.buysellads.com/ads/click/x/GTND42QUCYSIV2QUF67LYKQMCASDE5QUCYAD4Z3JCWSIK5QJCYSDK53KC6BI52JUCAADVK3EHJNCLSIZ">
+                                <img src="https://res.cloudinary.com/css-tricks/image/fetch/w_600,q_auto,f_auto/https://cdn4.buysellads.net/uu/7/53660/1572902758-banner-600x600.jpg" alt="Ad for Monday">
+                            </a>
+                        </div>
+                        <div class="interlude">
+                            <img src="https://res.cloudinary.com/css-tricks/image/upload/f_auto,q_auto/v1544564316/Avatar_qr6vy9.png" class="avatar" height="80" width="80" alt="CSS-Tricks Star Logo">
+                            <a href="//srv.buysellads.com/ads/click/x/GTND42QUCYSIV2QUF67LYKQMCASDE5QUCYAD4Z3JCWSIK5QJCYSDK53KC6BI52JUCAADVK3EHJNCLSIZ">monday.com is built to help you manage your projects.</a>
+                        </div>
+                         <img src="https://ad.doubleclick.net/ddm/trackimp/N728909.1044586DAVIDWALSH.NAME/B21046303.220247477;dc_trk_aid=418624587;dc_trk_cid=110918960;ord=[timestamp];dc_lat=;dc_rdid=;tag_for_child_directed_treatment=;tfua=?" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
