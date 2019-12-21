@@ -1,0 +1,243 @@
+*, :after, :before {
+box-sizing: border-box;
+}
+html {
+-webkit-text-size-adjust: 100%;
+-ms-text-size-adjust: 100%;
+padding: 0;
+font-family: -system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
+font-size: 20px;
+font-weight: 400;
+line-height: 1.35;
+--maxWidth: 1284px;
+scrollbar-color: linear-gradient(180deg, #ff8a00, #e52e71);
+scrollbar-width: 30px;
+background: #100e17;
+color: #fff;
+overflow-x: hidden;
+}
+body, html {
+margin: 0;
+}
+html::-webkit-scrollbar {
+width: 30px;
+height: 30px;
+}
+html::-webkit-scrollbar-thumb {
+background: -webkit-gradient(linear, left top, left bottom, from(#ff8a00), to(#e52e71));
+background: linear-gradient(180deg, #ff8a00, #e52e71);
+border-radius: 30px;
+box-shadow: inset 2px 2px 2px hsla(0, 0%, 100%, .25), inset -2px -2px 2px rgba(0, 0, 0, .25);
+}
+html::-webkit-scrollbar-track {
+background: linear-gradient(90deg, #201c29, #201c29 1px, #100e17 0, #100e17);
+}
+:root {
+--nav-height: 130px;
+}
+a {
+text-decoration: none;
+color: white;
+}
+dl, menu, ol, ul {
+margin: 0;
+list-style: none;
+}
+menu, ol, ul {
+padding: 0;
+}
+form {
+margin: 0;
+}
+button, input, select, textarea {
+font-size: 100%;
+margin: 0;
+vertical-align: baseline;
+*vertical-align: middle;
+}
+button, input {
+line-height: normal;
+}
+button, html input[type=button],input[type=submit] {
+-webkit-appearance: button;
+cursor: pointer;
+}
+input[type=search] {
+-webkit-appearance: textfield;
+}
+input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+a:hover {
+background: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#e52e71));
+background: linear-gradient(90deg, #ff8a00, #e52e71);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+-webkit-box-decoration-break: clone;
+box-decoration-break: clone;
+text-shadow: none;
+}
+input[type=email], input[type=password], input[type=search], input[type=text], input[type=url], textarea {
+font-family: inherit;
+outline: 0;
+border: 0;
+padding: 5px 1rem;
+border-radius: 16px;
+}
+.header-part, .header-part .logo {
+position: relative;
+display: -webkit-box;
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+}
+.header-part .logo {
+-webkit-transition: 0s;
+transition: 0s;
+-webkit-box-flex: 0;
+flex: 0;
+padding: 0 40px;
+align-self: stretch;
+}
+.header-part .logo>a {
+display: -webkit-box;
+display: flex;
+-webkit-box-align: center;
+align-items: center;
+}
+body.home .header-part .logo>a:before {
+background-image: -webkit-gradient(linear, right top, left top, from(#ff8a00), to(#e52e71));
+background-image: linear-gradient(270deg, #ff8a00, #e52e71);
+content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 5px;
+}
+.header-part .icon-logo-star {
+width: 34px;
+height: 38px;
+margin: 0 .5rem 0 0;
+fill: #ff8a00;
+-webkit-transition: 1.4s ease-out;
+transition: 1.4s ease-out;
+-webkit-transform: rotate(2turn);
+transform: rotate(2turn);
+}
+.header-part .icon-logo-text {
+fill: #fff;
+height: 25px;
+width: 199px;
+}
+.header-part .header-middle {
+-webkit-box-flex: 1;
+flex: 1;
+}
+.header-part .main-nav .main-sections {
+display: -webkit-box;
+display: flex;
+}
+.header-part .main-nav .main-sections>li {
+-webkit-box-flex: 1;
+flex: 1;
+height: var(--nav-height);
+}
+.header-part .main-nav .main-sections>li>a {
+font-family: Rubik, Lato, Lucida Grande, Lucida Sans Unicode, Tahoma, Sans-Serif;
+font-weight: 500;
+font-size: .8rem;
+color: #fff;
+height: var(--nav-height);
+padding: .5rem;
+position: relative;
+display: -webkit-box;
+display: flex;
+-webkit-box-orient: vertical;
+-webkit-box-direction: normal;
+flex-direction: column;
+-webkit-box-align: center;
+align-items: center;
+-webkit-box-pack: center;
+justify-content: center;
+text-align: center;
+border-right: 1px solid #201c29;
+-webkit-transition: .1s;
+transition: .1s;
+}
+.header-part .main-nav .main-sections>li>a:focus, .header-part .main-nav .main-sections>li>a:hover {
+-webkit-text-fill-color: #fff;
+background: #201c29;
+}
+.header-part .main-nav .main-sections>li>a>svg {
+-webkit-transition: .2s;
+transition: .2s;
+pointer-events: none;
+width: 40px;
+height: 40px;
+display: block;
+margin: 0 auto .5rem;
+fill: none;
+stroke-width: 2;
+stroke: #c2c2c2;
+}
+.header-part .main-nav .main-sections>li:first-child a {
+border-left: 1px solid #201c29;
+}
+.header-part .main-nav:focus>ul>li:first-child svg, .header-part .main-nav:hover>ul>li:first-child svg {
+stroke: #ff8a00;
+}
+.header-part .main-nav:focus>ul>li:nth-child(2) svg, .header-part .main-nav:hover>ul>li:nth-child(2) svg {
+stroke: #e52e71;
+}
+.header-part .main-nav:focus>ul>li:nth-child(3) svg, .header-part .main-nav:hover>ul>li:nth-child(3) svg {
+stroke: #f44336;
+}
+.header-part .main-nav:focus>ul>li:nth-child(4) svg, .header-part .main-nav:hover>ul>li:nth-child(4) svg {
+stroke: #9c27b0;
+}
+.header-part .main-nav:focus>ul>li:nth-child(5) svg, .header-part .main-nav:hover>ul>li:nth-child(5) svg {
+stroke: #03a9f4;
+}
+.header-part .main-nav:focus>ul>li:nth-child(6) svg, .header-part .main-nav:hover>ul>li:nth-child(6) svg {
+stroke: #4caf50;
+}
+.header-part .main-nav:focus>ul>li:nth-child(7) svg, .header-part .main-nav:hover>ul>li:nth-child(7) svg {
+stroke: #8bc34a;
+}
+.page-header-top-nav .search-form, .header-part .search-form {
+background: #fff;
+padding: 2px;
+border-radius: 28px;
+display: -webkit-box;
+display: flex;
+}
+.page-header-top-nav .search-form input[type=search], .header-part .search-form input[type=search] {
+background: #201c29;
+border: 0;
+min-width: 0;
+-webkit-box-flex: 1;
+flex: 1;
+color: #fff;
+padding: .75rem 1.5rem;
+border-top-left-radius: 27px;
+border-bottom-left-radius: 27px;
+border-top-right-radius: 0;
+border-bottom-right-radius: 0;
+-webkit-appearance: unset;
+}
+.page-header-top-nav .search-button, .header-part .search-button {
+border: 0;
+border-top-right-radius: 27px;
+border-bottom-right-radius: 27px;
+background-image: -webkit-gradient(linear, left top, right top, from(#ff8a00), to(#e52e71));
+background-image: linear-gradient(90deg, #ff8a00, #e52e71);
+padding: 0 22px 0 18px;
+}
+.page-header-top-nav .icon-search, .header-part .icon-search {
+fill: #fff;
+}
+.header-part .search {
+-webkit-box-flex: 0;
+flex: 0 0 400px;
+}
