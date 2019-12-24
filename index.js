@@ -109,7 +109,7 @@ $(document).ready(function(){
     $(".menu-icon").click(function(){
         openNav();
     });
-    $(".close").click(function(){
+    $(".header-right").click(function(){
         closeNav();
     });
     searchicon=createElement('div','search-icon');
@@ -144,4 +144,55 @@ $(document).ready(function(){
     logintext.innerHTML='SUBMIT YOUR SITE!';
     login.appendChild(logintext);
 //------------COMPLETED HEAER------------------//
+    maincontent=createElement('div','main-content');
+    body.appendChild(maincontent);
+    maintop=createElement('div','main-top');
+    maincontent.appendChild(maintop);
+    maintophead=createElement('div','main-top-head');
+    maintop.appendChild(maintophead);
+    p=createElement('p','main-top-left');
+    p.innerHTML="Site Of The Day  <span class='date'>December 23,2019</span>"
+    maintophead.appendChild(p);
+    maintopright=createElement('div','main-top-right');
+    maintophead.appendChild(maintopright);
+    img=createElement('img');
+    img.src="share-icon.svg";
+    maintopright.appendChild(img);
+    maintopmid=createElement('div','main-top-mid');
+    maintop.appendChild(maintopmid);
+    row=createElement('div','row');
+    row.innerHTML=`<h2 style="font-size:38px;font-weight:800">David William Baum</h2>`;
+    maintopmid.appendChild(row); 
+    row=createElement('div','row');
+    row.innerHTML=`<p>BY <span class='colortext'>BENMINGO</span> FROM 
+    <span class='weighttext'>NETHERLANDS</span> WITH <span class='weighttext'>7.56</span>`;
+    maintopmid.appendChild(row);       
+    progresscircle=createElement('div','progress-circle-div');
+    maintopmid.appendChild(progresscircle);
+    progressul=createElement('ul',undefined,'progress-circle-ul');
+    progresscircle.appendChild(progressul);
+    listitems=[
+        ['design',7,'.49'],
+        ['usability',7,'.19'],
+        ['creativity',8,'.09'],
+        ['content',7,'.90'],
+        ['mobile',8,'.50']
+    ]
+    listitems.forEach(element => {
+        temp=` <li class="progress-circle `+element[0]+`">
+                <div class="circle">
+                    <svg width="84" height="84">
+                        <circle r="38" cy="41" cx="41"></circle>
+                        <circle r="38" cy="41" cx="41" stroke-linejoin="round" stroke-linecap="round"
+                            class="circle-progress"
+                            style="animation: 900ms ease 0s 1 normal forwards running donut-show-0;"></circle>
+                    </svg>
+                    <div class="percent">
+                        <span class="int">`+element[1]+`</span><span class="dec">`+element[2]+`</span>
+                    </div>
+                </div>
+                <div class="legend">`+element[0].toUpperCase()+`</div>
+            </li>`;
+        document.getElementById("progress-circle-ul").innerHTML += temp;
+    });
 });

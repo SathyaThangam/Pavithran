@@ -124,7 +124,7 @@ body{
 .header-right{
     float: right;
     margin-top: -77px;
-
+    cursor: pointer;
 }
 .header-left{
     display: flex;
@@ -222,7 +222,7 @@ body{
     margin-left: 67px;
     margin-top: 3px;
 }
-.close,.menu-icon{
+.menu-icon{
     cursor: pointer;
 }
 .header-main{
@@ -291,4 +291,116 @@ body{
 }
 .search-icon img{
     cursor: pointer;
+}
+.main-content{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    clear: both;
+    min-height: calc(100vh - 418px);
+    transition: padding 0.6s ease-in-out;
+    z-index: 0;
+}
+.main-content .main-top{
+    height: 473.047px;
+    padding-left: 66px;
+    padding-right: 66px;
+}
+.main-top-head{
+    display: flex;
+    margin: 50px 0;
+    font-size: 17px;
+}
+.main-top-right{
+    align-self: center;
+    margin-inline-start: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.main-top-mid{
+    text-align: center;
+}
+.row p{
+    font-size: 15px;
+}
+.weighttext{
+    font-weight: bold;
+    font-size: 15px;
+}
+.colortext{
+    color: #49c5b6;
+    font-weight: bold;
+
+}
+
+
+.progress-circle-div {
+    padding-top: 10px;
+    display: inline-block;
+}
+.progress-circle-div li {
+    float: left;
+    margin-right: 15px;
+    list-style: none;
+}
+.progress-circle {
+    position: relative;
+    display: inline-block;
+}
+.progress-circle .circle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    fill: none;
+    stroke: #fff;
+    stroke-width: 3;
+}
+.progress-circle svg {
+    display: block;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.progress-circle circle:nth-child(1) {
+    stroke-opacity: 0.3;
+}
+
+.progress-circle circle:nth-child(2) {
+    stroke-dasharray: 238.76104;
+    stroke-dashoffset: 238.76104;
+}
+
+.progress-circle .percent {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    line-height: 24px;
+    text-align: center;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.progress-circle.design circle {
+    stroke: #df6c4f;
+}
+.progress-circle.usability circle {
+    stroke: #ecd06f;
+}
+.progress-circle.creativity circle {
+    stroke: #3c948b;
+}
+.progress-circle.content circle {
+    stroke: #1a99aa;
+}
+.progress-circle.mobile circle {
+    stroke: #00FCA3;
 }
