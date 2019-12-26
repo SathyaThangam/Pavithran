@@ -1,6 +1,11 @@
+@font-face{
+    font-family: apercu;
+    src: url(apercureg.otf);
+}
+
 body{
     margin: 0;
-    font-family: "apercu",sans-serif;
+    font-family: apercu,sans-serif;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
 }
@@ -66,6 +71,7 @@ body{
 }
 .middle-slogan h1{
         font-size: 16px;     
+        font-weight: 500;
 }
 .header-top .ico-svg{
     top: -1px;
@@ -226,7 +232,8 @@ body{
     cursor: pointer;
 }
 .header-main{
-    position: relative;
+    position: sticky;
+    top: 0;
     display: flex;
     height: 70px;
     border-bottom: 1px solid #E6EAEA;
@@ -260,7 +267,7 @@ body{
     margin-top: 2px;
 }
 .login{
-    width: 190px;
+    width: 183px;
     background-color: #49c5b6;
     color: #fff;
     height: 70px;
@@ -301,15 +308,24 @@ body{
     transition: padding 0.6s ease-in-out;
     z-index: 0;
 }
+.main-top{
+    background-image: url(back.jpg);
+    height: 473.047px;
+    padding-left: 66px;
+    padding-right: 66px;
+    color: white;
+}
 .main-content .main-top{
     height: 473.047px;
     padding-left: 66px;
     padding-right: 66px;
+    cursor: pointer;
 }
 .main-top-head{
     display: flex;
     margin: 50px 0;
     font-size: 17px;
+    margin-bottom: -18px;
 }
 .main-top-right{
     align-self: center;
@@ -320,7 +336,7 @@ body{
     width: 34px;
     height: 34px;
     text-align: center;
-    border: 1px solid black;
+    border: 1px solid white;
     border-radius: 50%;
     overflow: hidden;
     cursor: pointer;
@@ -339,10 +355,11 @@ body{
 .colortext{
     color: #49c5b6;
     font-weight: bold;
-
+    transition: color 0.3s ease-in-out;
 }
-
-
+.colortext:hover{
+    color: white;
+}
 .progress-circle-div {
     padding-top: 10px;
     display: inline-block;
@@ -403,4 +420,248 @@ body{
 }
 .progress-circle.mobile circle {
     stroke: #00FCA3;
+}
+.VisitSite{
+    border-color: #49c5b6;
+    color: #fff;
+    background-color: #49c5b6;
+    font-weight: 500;
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    padding: 0 23px;
+    border: 1px solid;
+    border-radius: 50px;
+    line-height: 34px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    margin-right: 15px;
+}
+.VisitSite:hover{
+    color: #49c5b6;
+    background-color: transparent;
+}
+.Collect{
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    padding: 0 23px;
+    border: 1px solid;
+    border-radius: 50px;
+    line-height: 34px;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+.Collect:hover{
+    color:#49c5b6;
+}
+.visit-site{
+    margin-top: 39px;
+    width: 225px;
+}
+.users-main {
+    display: flex;
+    position: relative;
+    bottom: 24px;
+    z-index: 2;
+    float: right;
+    margin: -34px;
+}
+.jury-svg{
+    margin-right: -46px;
+    margin-top: 16px;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+}
+.jury-svg svg {
+    position: absolute;
+    left: -18px;
+    fill: white;
+    transition: all 0.3s ease-in-out;
+}
+.jury-svg .borders {
+    padding-bottom: 7px;
+    padding-top: 8px;
+    border: 1px solid;
+    border-left: none;
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-right: 23px;
+    color: white;
+}
+.users-main #user-list {
+    margin-left: 15px;
+}
+#user-list{
+    display: flex;
+    padding-inline-start: 0;
+    margin-inline-end: 60px;
+}
+#user-list>li {
+    position: relative;
+    float: left;
+    margin-right: 6px;
+    list-style: none;
+}
+#user-list>li img{
+    border-radius: 50%;
+}
+#user-list>li img:hover{
+    opacity: 0.4;
+}
+.container{
+    padding: 0 66px;
+}
+.span-heading2{
+    margin-left: 7px;
+}
+.bold{
+    font-weight: bold;
+}
+.cont1-grid ul{
+    list-style-type: none;    
+}
+
+
+
+
+.card-main{
+    ffont-family: apercu,sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    color: black;
+}
+.card-top{
+    position: relative;
+}
+.contentrow2{
+    display: flex;
+}
+.contentrow2 .content-left{
+    margin-left: 168px;
+}
+.card-footer{
+    display: flex;
+}
+.card-footer-right ul{
+    display: flex;
+    margin-block-start: 0px;
+    padding-inline-start: 5em;
+    margin-left: 1em;
+}
+.card-footer-right ul li{
+    margin-top: 9px;
+    color: white;
+    margin-left: -22px;
+    padding: 3px;
+    font-size: 10px;
+    list-style-type: none;
+    border-radius: 36px;
+    background-color: #FF4E4E;
+}
+.card-like,.card-likes{
+    display: flex;
+}
+.card-likes p{
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+.card-like{
+    border-radius: 21px;
+    padding-top: 5px;
+    border: 1px solid;
+    padding-right: 28px;
+    position: relative;
+    padding-left: 20px;
+    padding-bottom: 5px;
+}
+
+.card-likes{
+    margin-left: 12em;
+    margin-top: -282px;
+    position: absolute;
+    color: white;
+    cursor: pointer;
+    opacity: 0.6;
+}
+
+.card-collect{
+    line-height: 2;
+    margin-left: 7px;
+    border: 1px solid;
+    padding-left: 22px;
+    padding-right: 22px;
+    border-radius: 20px;
+}
+.card-share{
+    margin-top: -3em;
+    position: absolute;
+    margin-left: 22.5em;
+    border: 1px solid;
+    border-radius: 50%;
+    padding: 3px;
+    color: white;
+}
+.bold{
+    font-weight: 600;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.bold:hover{
+    color: #64686A;
+}
+.cardsimg{
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+}
+.footerimg{
+    border-radius: 50%;
+    width: 27px;
+    height: 27px;
+}
+.super{
+    vertical-align: super;
+}
+.card-likes,.card-share{
+    display: none;
+}
+.ullist li{
+    overflow: hidden;
+    margin-right: 33px;
+    width: 33.33%;
+}
+.cont-header{
+        display: flex;
+        justify-content: space-between;
+        padding: 56px 0;    
+}
+.ullist{
+    display: flex;
+    padding-inline-start: 0px;
+    list-style-type: none;
+}
+.votenow {
+    display: none;
+    margin-top: -12.5em;
+    color: #202121;
+    background-color: #fcfcfc;
+    font-weight: 500;
+    height: 50px;
+    line-height: 50px;
+    position: absolute;
+    padding: 0 23px;
+    border: 1px solid #fcfcfc;
+    border-radius: 50px;
+    font-size: 14px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    margin-left: 8.4em;
 }
