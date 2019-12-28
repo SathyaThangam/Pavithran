@@ -1,0 +1,223 @@
+body{
+    margin: 0;
+}
+.searchContainer{
+    background: linear-gradient(135.46deg,#d11450,#df293a);
+    width: 100%;
+    padding: 10px 0 32px;
+}
+.searchWidget{
+    display: flex;
+    border-radius: 4px;
+    justify-content: space-between;
+    width: 74%;
+    margin: 0 auto;
+    border: 1px solid #999;
+    position: sticky;
+    border-top-left-radius: 4px!important;
+    border-bottom-left-radius: 4px!important;
+    height: 100%;
+    box-sizing: border-box;
+    z-index: 20;
+}
+.searchHeading{
+    color: #fff;
+    font-weight: 800;
+    line-height: 1.5;
+    margin: 16px 0;
+    text-align: center;
+}
+#searchhotels{
+    padding-right: 112px;
+    line-height: 1;
+    outline: none;
+    padding: 19px 50px 19px 16px;
+    font-size: 16px;
+    color: rgba(0,0,0,.87);
+    border: none;
+    box-shadow: none;
+    box-sizing: border-box;
+    transition: .2s;
+    font-weight: 600;
+    width: 408px;
+}
+.selectDate{
+    display: flex;
+}
+.selectDate input[name=fromDate]{
+    border: 0;
+    border-left: 1px solid #999;
+}
+.selectDate input[name=toDate]{
+    border: 0;
+    border-right: 1px solid #999;
+}
+.selectRoom{
+    display: flex;
+}
+.selectRoom input{
+    width: 50%;
+    border: 0;
+}
+.searchButton{
+    background-color: #1ab64f;
+    color: white;
+    text-align: center;
+    line-height: 3.1;
+    font-size: 18px;
+    width: 34%;
+}
+.searchButton button{
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 19px;
+}
+.main-container {
+    height: 200px;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+.hotel-container{
+    grid-template-rows: 250px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    height: 100%;
+}
+.hotel-rating{
+    display: grid;
+    grid-template-columns: 51px 85px auto;
+}
+.hotel-facilities ul{
+    display: flex;
+    padding-inline-start: 0;
+}
+.hotel-facilities li{
+    display: grid;
+    grid-template-columns: 23px auto;
+    font-size: 14px;
+    color: #222;
+    font-weight: 400;
+}
+.prices{
+    width: 57%;
+    list-style-type: none;
+    display: flex;
+    padding-inline-start: 0;
+    margin-block-start: 2.5em;
+    margin-block-end: 0;
+    place-content: space-around;
+}
+.price-list p{
+    margin-block-start: 0;
+    margin-left: 7px;
+}
+.hotel-footer{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.footer-buttons{
+    margin-block-start: 2.6em;
+}
+.footer-buttons button{
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25em;
+    padding: 8px 16px;
+    border-radius: 2px!important;
+}
+.footer-buttons .view-details{
+    background-color: #fff;
+    color: #222;
+    border: 1px solid #222;
+}
+.footer-buttons .book-now{
+    background-color: #1ab64f;
+    color: #fff;
+    border: 1px solid #1ab64f;
+}
+.hotel-details{
+    cursor: pointer;
+    margin-top: -9px;
+    margin-left: 11px;
+}
+.prices .final-price{
+    font-size: 24px;
+    font-weight: 700;
+    color: #ee2a24;
+}
+.prices .original-price{
+    text-decoration: line-through;
+    font-size: 16px;
+    color: #6d787d;
+    margin-right: 8px;
+    align-self: center;
+}
+.prices .discount-percentage{
+    font-size: 14px;
+    font-weight: 600;
+    color: #f5a623;
+    line-height: 25px;
+}
+.price-list p{
+    font-size: 12px;
+    color: #6d787d;
+    font-weight: 400;
+    line-height: 1em;
+    margin-top: 4px;
+}
+.hotel-name-address .hotelname{
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    margin-block-end: 0;
+    color: #222;
+}
+.hotel-name-address .hotel-address{
+    font-size: 16px;
+    margin-block-start: 9px;
+}
+.hotel-rating .rating{
+    border-radius: 2px;
+    padding: 3px 6px;
+    margin-right: 9px;
+    background-color: #52b520;
+    font-size: 12px;
+    color: #fff;
+}
+.hotel-rating .rating svg{
+    vertical-align: top;
+    stroke: none;
+    stroke-width: 1;
+    fill: #fff;
+    fill-rule: evenodd;
+    width: 9px;
+    height: 10px;
+}
+.hotel-rating .rating-count,.hotel-rating .review{
+    font-size: 12px;
+    color: #222;
+    align-self: center;
+}
+.picture-container {
+    display: grid;
+    grid-template-columns: 84% 16%;
+    cursor: pointer;
+}
+.picture-container ul{
+    list-style-type: none;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    padding-inline-start: 0;
+    display: grid;
+}
+.picture-main > img{
+        object-fit: cover;
+        max-width: 100%;
+        max-height: 100%;
+}
+.picture-container >ul>li>img{
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+}

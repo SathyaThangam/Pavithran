@@ -2,15 +2,10 @@
 
 <head>
     <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
 </head>
 <style>
-    #locations{
-        background-color: transparent;
-    }
-    option{
-        min-height: 0;
-    white-space: normal;
-    }
 </style>
 <body>
     <div class="searchContainer">
@@ -20,9 +15,8 @@
             </div>
             <div class="searchWidget">
                 <div class="searchHotel">
-                    <input list="locations" name="hotelLocation" id="searchhotels" oninput="getLocationDetails()" placeholder="Bangalore,Karnataka,...">
+                    <input list="locations" name="hotelLocation" id="searchhotels" oninput="getLocationDetails()" placeholder="Search by city, hotel, or neighbourhood">
                     <datalist id="locations">
-                        
                     </datalist>
                 </div>
                 <div class="selectDate">
@@ -30,69 +24,89 @@
                     <input type="date" name="toDate">
                 </div>
                 <div class="selectRoom">
-                    <input type="number" name="roomCount" placeholder="1 Room">
-                    <input type="number" name="guestCount" placeholder="1 Guest">
+                        <input type="number" name="roomCount" placeholder="1 Room">
+                        <input type="number" name="guestCount" placeholder="1 Guest">
                 </div>
-                  <button onclick="getHotels()">GET HOTELS</button>            
+                <div class='searchButton' onclick="getHotels()">  
+                    <button>Search</button>               
+                </div>
             </div>
+        </div>
+    </div>
+    <div class="main-container">
+        <div class="main-container-left">
+        </div>
+        <div class="main-container-right">
+            <div class="header">
+                  <center><h1>HEADER</h1></center>  
+            </div>
+            <div class="offers">
+                <center><h1>OFFERS</h1></center>  
+            </div>
+            <div class="hotel-container">
+                <div class="picture-container">
+                    <div class="picture-main">
+                        <img src="image1.webp" id="mainpic" onclick="pictureChange(this)">
+                    </div>
+                    <ul class="hotels-pics">
+                            <li class="pic2">
+                                <img src="image2.webp" id='subpic0' onclick="pictureChange(this)">
+                            </li>
+                            <li class="pic2">
+                                <img src="image3.webp" id='subpic1' onclick="pictureChange(this)">
+                            </li>
+                            <li class="pic2">
+                                <img src="image4.webp" id='subpic2' onclick="pictureChange(this)">
+                            </li>
+                            <li class="pic2">
+                                <img src="image5.webp" id='subpic3' onclick="pictureChange(this)">
+                            </li>
+                            <li class="pic2">
+                                <img src="image6.webp" id='subpic4' onclick="pictureChange(this)">
+                            </li>
+                    </ul>
+                 </div>
+                <div class="hotel-details">
+                    <div class="hotel-name-address">
+                        <h3 class="hotelname">Hotel Name</h3>
+                        <h3 class="hotel-address">Hotel Address</h3>
+                    </div>
+                    <div class="hotel-rating">
+                        <div class="rating">4.2 <svg viewBox="0 0 9 10" xmlns="http://www.w3.org/2000/svg"><path d="M7.25 9.5a.238.238 0 01-.12-.032L4.5 7.948l-2.63 1.52a.238.238 0 01-.265-.017.271.271 0 01-.102-.26l.48-3.042-1.91-2.021a.276.276 0 01-.061-.268.255.255 0 01.197-.18l2.874-.508L4.276.646A.25.25 0 014.5.5c.094 0 .181.057.223.146l1.194 2.526 2.874.508a.255.255 0 01.197.18.275.275 0 01-.061.268l-1.91 2.021.48 3.042c.015.1-.024.201-.102.26a.242.242 0 01-.145.049z"></path></svg></div>
+                        <div class="rating-count">(1351 Ratings)</div>
+                        <div class="review">&middot  Very Good</div>
+                    </div>
+                    <div class="hotel-facilities">
+                      <ul class="facility">
+                          <li>
+                          <div class="facility-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="17" viewBox="0 0 22 17">
+                                <path fill="#000" fill-rule="evenodd" d="M20.172 0H1.832C.823 0 0 .792 0 1.767v6.422c0 .971.823 1.763 1.832 1.763h18.336C21.177 9.952 22 9.16 22 8.189V1.767C22.004.792 21.181 0 20.172 0zm.712 8.277a.61.61 0 0 1-.617.604H1.737a.61.61 0 0 1-.617-.604V1.683a.61.61 0 0 1 .617-.604h18.526a.61.61 0 0 1 .617.604v6.594h.004zm-2.315-1.85H3.435c-.338 0-.61.218-.61.49 0 .27.272.49.61.49h15.13c.338 0 .61-.22.61-.49 0-.272-.272-.49-.606-.49zm-4.965-3.001H8.049c-.124 0-.224.219-.224.49 0 .27.1.49.224.49h5.553c.124 0 .224-.22.224-.49 0-.271-.1-.49-.222-.49zm-9.03 8.996a3.31 3.31 0 0 0-.291-.559c-.148-.213-.08-.495.154-.63a.529.529 0 0 1 .69.14c.1.145.242.392.38.72.488 1.153.55 2.383-.103 3.545a4.304 4.304 0 0 1-.666.885.534.534 0 0 1-.706.04.43.43 0 0 1-.044-.645 3.39 3.39 0 0 0 .526-.697c.503-.896.454-1.866.06-2.8zm3.599 0a3.31 3.31 0 0 0-.292-.559c-.148-.213-.079-.495.155-.63a.529.529 0 0 1 .69.14c.1.145.241.392.38.72.487 1.153.55 2.383-.103 3.545a4.304 4.304 0 0 1-.667.885.534.534 0 0 1-.706.04.43.43 0 0 1-.043-.645 3.39 3.39 0 0 0 .526-.697c.503-.896.454-1.866.06-2.8zm9.002 0c-.394.933-.443 1.903.06 2.8.135.24.309.472.525.696a.43.43 0 0 1-.043.645.534.534 0 0 1-.706-.04 4.304 4.304 0 0 1-.666-.885c-.653-1.162-.59-2.392-.104-3.545.14-.328.28-.575.38-.72a.529.529 0 0 1 .69-.14c.234.135.303.417.155.63a3.31 3.31 0 0 0-.291.559zm-3.603 0c-.395.933-.443 1.903.06 2.8.135.24.309.472.525.696a.43.43 0 0 1-.043.645.534.534 0 0 1-.706-.04 4.304 4.304 0 0 1-.666-.885c-.653-1.162-.59-2.392-.104-3.545.14-.328.28-.575.38-.72a.529.529 0 0 1 .69-.14c.234.135.303.417.155.63a3.31 3.31 0 0 0-.291.559z"></path>
+                            </svg>
+                          </div>
+                          <div class="facility-name">Parking Facility</div>
+                          </li>
+                        </ul>
+                    </div>
+                    <div class="hotel-footer">
+                        <div class="price-list">
+                            <ul class="prices">
+                                <li class="final-price">₹1438</li>
+                                <li class="original-price">₹1438</li>
+                                <li class="discount-percentage">40% off</li>
+                            </ul>
+                            <p>per room per night</p>
+                        </div>
+                        <div class="footer-buttons">
+                            <button class="view-details">View Details</button>
+                            <button class="book-now">Book Now</button>
+                        </div>
+                    </div>
+                </div>
+          </div>
         </div>
     </div>
     <ul id='disp'>
 
     </ul>
 </body>
-<script>
-    function getLocationDetails() {
-        givenLocation=document.getElementById('searchhotels').value;
-        if(givenLocation){
-            fetch('https://www.oyorooms.com/api/pwa/autocompletenew?query='+givenLocation+'&region=1&userId=ae061dfdacbf1939cbfe6344daa0091b&additionalFields=rating%2Csupply%2Ctrending%2Ctags%2Ccategory')
-            .then(function(res){
-                return res.json();
-            })
-
-            .then(function(data){
-                        datalist=document.getElementById('locations');
-                        datalist.innerHTML=null;
-                        locationdata=data.responseObject;     
-                        locationdata.forEach(element => {
-                            locationtype=element.locationType;
-                            if(locationtype=="city"){
-                                locationid=element.id.slice(5,element.id.length);
-                                div=`<option value="`+element.displayName+`" data-value="`+locationid+`">`;
-                               // div=`<option data-value="`+locationid+`">`+element.displayName+`</option>`;
-                                datalist.innerHTML+=div;
-                            }
-                    });
-            })
-        }
-    }
-    var locid;
-    $("#searchhotels").focusout(function(){
-        shownVal = document.getElementById("searchhotels").value;
-        if(shownVal)
-        locid = document.querySelector("#locations option[value='"+shownVal+"']").dataset.value;
-    })
-
-
-
-    function getHotels(){
-        locationArr=document.getElementById("searchhotels").value.split(',');
-        locationArr[1]=locationArr[1].slice(1,locationArr[1].length);
-        locationArr[2]=locationArr[2].slice(1,locationArr[2].length);
-        fetch('https://www.oyorooms.com/api/pwa/getListingPage?url=%2Fsearch%3Flocation%3D'+locationArr[0]+'%252C%2520'+locationArr[1]+'%252C%2520'+locationArr[2]+'%26city%3D'+locationArr[0]+'%26searchType%3Dcity%26checkin%3D26%252F12%252F2019%26checkout%3D27%252F12%252F2019%26roomConfig%255B%255D%3D1%26country%3Dindia%26guests%3D1%26rooms%3D1%26filters%255Bcity_id%255D%3D'+locid+'&locale=en')
-        .then(function(res){
-            return res.json();
-        })
-        .then(function(data){
-                templist=document.getElementById('disp');
-                templist.innerHTML=null;
-                hoteldata=data.searchData.hotels;
-                console.log(hoteldata);
-                hoteldata.forEach(element => {
-                    console.log(element.name);
-                    tempele=`<li>`+element.name+`</li>`
-                    templist.innerHTML+=tempele;
-                });
-        })
-    }
-</script>
